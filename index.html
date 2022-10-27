@@ -7,6 +7,7 @@
     <title>All Shirts</title>
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
         <!-- Header -->
         <div id="header">
             <div class="header-content">
-                <div class="header-content__nav">
+                <div class="header-content__nav grid wid grid__mb">
                     <div class="nav__logo">
                         <div class="nav__logo-shirt">
                             <img src="https://i.im.ge/2022/10/19/2jUepJ.logo.png" alt="" class="nav__logo-shirt--img">
@@ -26,7 +27,20 @@
                             Ca<span class="nav__logo-shirt--title-phus">phus</span>
                         </p>
                     </div>
+
+                    <!-- Click menu -->
+                    <input type="checkbox" name="" id="menu-checkbox" hidden class="nav__menu-checkbox pc__hidden">
+
+                    <!-- Overlay -->
+                    <label for="menu-checkbox" class="remove__menu-overlay pc__hidden"></label>
+
                     <ul class="nav__subnav-list">
+                        <label for="header-search-checkbox" class="header-content__nav-search pc__hidden">
+                            <i class="header-content__nav-search-icon fa-solid fa-magnifying-glass"></i>
+                        </label>
+                        <label for="menu-checkbox" class="remove__menu pc__hidden">
+                            <i class="remove__menu-icon fa-solid fa-xmark"></i>
+                        </label>
                         <li class="nav__subnav-list-item">
                             <a href="" class="nav__subnav-list-item--link">Home</a>
                         </li>
@@ -39,28 +53,48 @@
                         <li class="nav__subnav-list-item">
                             <a href="" class="nav__subnav-list-item--link">Pricing</a>
                         </li>
+                        <button class="nav__contact tablet_hidden pc__hidden">
+                            <a href="" class="nav__contact--link">
+                                Contact Us
+                            </a>    
+                        </button>
                     </ul>
-                    <label for="header-search-checkbox" class="header-content__nav-search">
+                    <label for="header-search-checkbox" class="header-content__nav-search tablet_mobile__hidden">
                         <i class="header-content__nav-search-icon fa-solid fa-magnifying-glass"></i>
                     </label>
-                    <button class="nav__contact">
+                    <button class="nav__contact mobile_hidden">
                         <a href="" class="nav__contact--link">
                             Contact Us
                         </a>    
                     </button>
+                    <label for="menu-checkbox" class="nav__menu pc__hidden">
+                        <i class="nav__menu-icon fa-solid fa-bars"></i>
+                    </label>
                 </div>
-                
+
                 <!-- Click search -->
                 <input type="checkbox" id="header-search-checkbox" hidden class="header__search-checkbox-click">
                 
                 <!-- Header Search -->
-                <div class="header-content__search grid wid">
+                <div class="header-content__search grid wid grid__mb">
                     <ul class="header-content__search-list">
                         <li class="header-content__search-item header-content__search-item-active">
                             <p class="header-content__search-item-title">Price</p>
                             <p class="header-content__search-item-des">
                                 100$
-                                <i class="header-content__search-item-des--icon fa-solid fa-chevron-down"></i>
+                                <i class="header-content__search-item-des--icon fa-solid fa-chevron-down"></i>                               
+                                <ul class="header-content__search-item-des-list">
+                                    <li class="header-content__search-item-des-son">200$</li>
+                                    <li class="header-content__search-item-des-son">300$</li>
+                                    <li class="header-content__search-item-des-son">400$</li>
+                                    <li class="header-content__search-item-des-son">500$</li>
+                                    <li class="header-content__search-item-des-son">500$</li>
+                                    <li class="header-content__search-item-des-son">600$</li>
+                                    <li class="header-content__search-item-des-son">700$</li>
+                                    <li class="header-content__search-item-des-son">800$</li>
+                                    <li class="header-content__search-item-des-son">900$</li>
+                                    <li class="header-content__search-item-des-son">1000$</li>
+                                </ul>
                             </p>
                         </li>
                         <li class="header-content__search-item">
@@ -68,6 +102,15 @@
                             <p class="header-content__search-item-des">
                                 Tp.HCM
                                 <i class="header-content__search-item-des--icon fa-solid fa-chevron-down"></i>
+                                <ul class="header-content__search-item-des-list">
+                                    <li class="header-content__search-item-des-son">Hà Nội</li>
+                                    <li class="header-content__search-item-des-son">Hàn Quốc</li>
+                                    <li class="header-content__search-item-des-son">Bình Thạnh</li>
+                                    <li class="header-content__search-item-des-son">Vũng Tàu</li>
+                                    <li class="header-content__search-item-des-son">Đà Nẵng</li>
+                                    <li class="header-content__search-item-des-son">Bạc Liêu</li>
+                                    <li class="header-content__search-item-des-son">Cần Thơ</li>
+                                </ul>
                             </p>
                         </li>
                         <li class="header-content__search-item">
@@ -75,13 +118,23 @@
                             <p class="header-content__search-item-des">
                                 Hoodie
                                 <i class="header-content__search-item-des--icon fa-solid fa-chevron-down"></i>
+                                <ul class="header-content__search-item-des-list">
+                                    <li class="header-content__search-item-des-son">Jean</li>
+                                    <li class="header-content__search-item-des-son">Polo</li>
+                                    <li class="header-content__search-item-des-son">Shirt</li>
+                                    <li class="header-content__search-item-des-son">Yami</li>
+                                </ul>
                             </p>
                         </li>
                         <li class="header-content__search-item">
-                            <p class="header-content__search-item-title">Selling</p>
+                            <p class="header-content__search-item-title">Bestseller</p>
                             <p class="header-content__search-item-des">
-                                Bestseller
+                                Today
                                 <i class="header-content__search-item-des--icon fa-solid fa-chevron-down"></i>
+                                <ul class="header-content__search-item-des-list">
+                                    <li class="header-content__search-item-des-son">Yesterday</li>
+                                    <li class="header-content__search-item-des-son">Last Week</li>
+                                </ul>
                             </p>
                         </li>
                     </ul>
@@ -117,7 +170,7 @@
                 <label for="header-search-checkbox" class="header-search__overlay"></label>
 
                 <!-- Header QR -->
-                <div class="header-content__qr grid wid">
+                <div class="header-content__qr grid wid grid__mb">
                     <div class="header-content__qr-text-button">
                         <h1 class="header-content__qr-heading">
                             All Your Style
@@ -188,473 +241,654 @@
 
         <!-- Content -->
         <div id="content">
-            <!-- QR Product -->
-            <div class="qr-product">
-                <!-- QR video -->
-                <div class="qr-video grid wid">
-                    <div class="qr-video__title">
-                        <h2 class="qr-video__title-heading">Customer experience when buying and using. Please see to understand the products.</h2>
-                    </div>
-                    <div class="qr-video__content">
-                        <div class="qr-video__content-collection">
-                            <img src="https://cf.shopee.vn/file/f9fd9db336233b1bf358a5276bfcda0d" alt="" class="qr-video__content-collection-img">
+            <div class="grid wid grid__mb">
+                <!-- QR Product -->
+                <div class="qr-product grid__mb-row">
+                    <!-- QR video -->
+                    <div class="qr-video grid wid grid__mb">
+                        <div class="qr-video__title">
+                            <h2 class="qr-video__title-heading">Customer experience when buying and using. Please see to understand the products.</h2>
                         </div>
-                        <div class="qr-video__content-customer">
-                            <img src="https://cf.shopee.vn/file/9e828118bf5918b79de403b93650a4d8" alt="" class="qr-video__content-customer-img" >
-                                <button class="video__content-customer-btn">
-                                    <i class="video__content-customer-btn--play fa-solid fa-play"></i>
-                                </button>
-                            </img>
-                            <!-- Video review -->
-                            <!-- <div class="qr-video__content-customer--wrap">
-                                <video src="https://i.ytimg.com/an_webp/zq2_K3SZ7jk/mqdefault_6s.webp?du=3000&sqp=CO36v5oG&rs=AOn4CLA5SG84pMCj4Cb1_wdc31wSJOsPhA" class="qr-video__content-customer-review"></video>
-                            </div> -->
+                        <div class="qr-video__content">
+                            <div class="qr-video__content-collection">
+                                <img src="https://cf.shopee.vn/file/f9fd9db336233b1bf358a5276bfcda0d" alt="" class="qr-video__content-collection-img">
+                            </div>
+                            <div class="qr-video__content-customer">
+                                <img src="https://cf.shopee.vn/file/9e828118bf5918b79de403b93650a4d8" alt="" class="qr-video__content-customer-img" >
+                                    <button class="video__content-customer-btn">
+                                        <i class="video__content-customer-btn--play fa-solid fa-play"></i>
+                                    </button>
+                                </img>
+                                <!-- Video review -->
+                                <!-- <div class="qr-video__content-customer--wrap">
+                                    <video src="https://i.ytimg.com/an_webp/zq2_K3SZ7jk/mqdefault_6s.webp?du=3000&sqp=CO36v5oG&rs=AOn4CLA5SG84pMCj4Cb1_wdc31wSJOsPhA" class="qr-video__content-customer-review"></video>
+                                </div> -->
+                            </div>
+                            <div class="qr-video__content-rain">
+                                <img src="https://i.im.ge/2022/10/18/25Dni1.drops-water.png" alt="" class="qr-video__content-rain--img">
+                            </div>
                         </div>
-                        <div class="qr-video__content-rain">
-                            <img src="https://i.im.ge/2022/10/18/25Dni1.drops-water.png" alt="" class="qr-video__content-rain--img">
+                        <div class="qr-video__wrap">
+                            <img src="https://i.im.ge/2022/10/19/2jUepJ.logo.png" alt="" class="qr-video__wrap-img">
                         </div>
-                    </div>
-                    <div class="qr-video__wrap">
-                        <img src="https://i.im.ge/2022/10/19/2jUepJ.logo.png" alt="" class="qr-video__wrap-img">
                     </div>
                 </div>
-            </div>
 
-            <!-- Selling Product -->
-            <div class="selling-product">
-                <div class="selling-product-wrap grid wid">
-                    <div class="selling-product__title">
-                        <h2 class="selling-product__title-heading">Our best seller product</h2>
-                        <button class="selling-product__btn btn button">
-                            <a href="" class="selling-product__btn-link">See all product</a>
-                            <i class="selling-product__btn-icon fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                    <ul class="selling-product__list">
-                        <li class="selling-product__item  l-3">
-                            <a href="" class="selling-product__item-link">
-                                <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/sg-11134201-22090-9ur7jxen42hv13);background-size: contain;background-repeat: no-repeat;">
-                                </div>
-                                <div class="selling-product__information">
-                                    <div class="selling-product__information-wrap">
-                                        <p class="selling-product__name">Shirt Hoodie</p>
-                                        <p class="selling-product__price">500$</p>
-                                        <p class="selling-product__discount">800$</p>
+                <!-- Selling Product -->
+                <div class="selling-product grid__mb-row">
+                    <div class="selling-product-wrap grid wid grid__mb">
+                        <div class="selling-product__title">
+                            <h2 class="selling-product__title-heading">Our best seller product</h2>
+                            <button class="selling-product__btn btn button">
+                                <a href="" class="selling-product__btn-link">See all product</a>
+                                <i class="selling-product__btn-icon fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <ul class="selling-product__list grid wid grid__mb">
+                            <li class="selling-product__item l-3 m-4 c-6">
+                                <a href="" class="selling-product__item-link">
+                                    <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/sg-11134201-22090-9ur7jxen42hv13);background-size: contain;background-repeat: no-repeat;">
                                     </div>
-                                    <button class="selling-product__buy btn button">
-                                        <a href="" class="selling-product__buy-link">BUY</a>
-                                    </button>
-                                </div>
-                                <div class="selling-product__item-favourite">
-                                    <i class="fas fa-check"></i>
-                                    <span>Hear</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="selling-product__item  l-3">
-                            <a href="" class="selling-product__item-link">
-                                <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/sg-11134201-22090-9ur7jxen42hv13);background-size: contain;background-repeat: no-repeat;">
-                                </div>
-                                <div class="selling-product__information">
-                                    <div class="selling-product__information-wrap">
-                                        <p class="selling-product__name">Shirt Hoodie</p>
-                                        <p class="selling-product__price">500$</p>
-                                        <p class="selling-product__discount">800$</p>
+                                    <div class="selling-product__information">
+                                        <div class="selling-product__information-wrap">
+                                            <p class="selling-product__name">Shirt Hoodie</p>
+                                            <p class="selling-product__price">500$</p>
+                                            <p class="selling-product__discount">800$</p>
+                                        </div>
+                                        <button class="selling-product__buy btn button">
+                                            <a href="" class="selling-product__buy-link">BUY</a>
+                                        </button>
                                     </div>
-                                    <button class="selling-product__buy btn button">
-                                        <a href="" class="selling-product__buy-link">BUY</a>
-                                    </button>
-                                </div>
-                                <div class="selling-product__item-favourite">
-                                    <i class="fas fa-check"></i>
-                                    <span>Hear</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="selling-product__item  l-3">
-                            <a href="" class="selling-product__item-link">
-                                <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/sg-11134201-22090-9ur7jxen42hv13);background-size: contain;background-repeat: no-repeat;">
-                                </div>
-                                <div class="selling-product__information">
-                                    <div class="selling-product__information-wrap">
-                                        <p class="selling-product__name">Shirt Hoodie</p>
-                                        <p class="selling-product__price">500$</p>
-                                        <p class="selling-product__discount">800$</p>
+                                    <div class="selling-product__item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Hear</span>
                                     </div>
-                                    <button class="selling-product__buy btn button">
-                                        <a href="" class="selling-product__buy-link">BUY</a>
-                                    </button>
-                                </div>
-                                <div class="selling-product__item-favourite">
-                                    <i class="fas fa-check"></i>
-                                    <span>Hear</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="selling-product__item  l-3">
-                            <a href="" class="selling-product__item-link">
-                                <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/sg-11134201-22090-9ur7jxen42hv13);background-size: contain;background-repeat: no-repeat;">
-                                </div>
-                                <div class="selling-product__information">
-                                    <div class="selling-product__information-wrap">
-                                        <p class="selling-product__name">Shirt Hoodie</p>
-                                        <p class="selling-product__price">500$</p>
-                                        <p class="selling-product__discount">800$</p>
-                                    </div>
-                                    <button class="selling-product__buy btn button">
-                                        <a href="" class="selling-product__buy-link">BUY</a>
-                                    </button>
-                                </div>
-                                <div class="selling-product__item-favourite">
-                                    <i class="fas fa-check"></i>
-                                    <span>Hear</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Choose Us -->
-            <div class="content-choose-us">
-                <div class="content-choose-us__wrap grid wid">
-                    <div class="content-choose-us__header">
-                        <h2 class="content-choose-us__header-heading">Looking for favourite t-shirt ?</h2>
-                        <ul class="content-choose-us__header-list">
-                            <li class="content-choose-us__header-item">
-                                All
+                                </a>
                             </li>
-                            <li class="content-choose-us__header-item">
-                                Assecories
+                            <li class="selling-product__item l-3 m-4 c-6">
+                                <a href="" class="selling-product__item-link">
+                                    <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/f79871cd6404871de3b7471abc57145a);background-size: contain;background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="selling-product__information">
+                                        <div class="selling-product__information-wrap">
+                                            <p class="selling-product__name">Shirt Jean</p>
+                                            <p class="selling-product__price">600$</p>
+                                            <p class="selling-product__discount">900$</p>
+                                        </div>
+                                        <button class="selling-product__buy btn button">
+                                            <a href="" class="selling-product__buy-link">BUY</a>
+                                        </button>
+                                    </div>
+                                    <div class="selling-product__item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Hear</span>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="content-choose-us__header-item">
-                                Categories
+                            <li class="selling-product__item l-3 m-4 c-6">
+                                <a href="" class="selling-product__item-link">
+                                    <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/433387abb147414d91232d1be6e0c216);background-size: contain;background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="selling-product__information">
+                                        <div class="selling-product__information-wrap">
+                                            <p class="selling-product__name">Shirt Polo</p>
+                                            <p class="selling-product__price">500$</p>
+                                            <p class="selling-product__discount">1.200$</p>
+                                        </div>
+                                        <button class="selling-product__buy btn button">
+                                            <a href="" class="selling-product__buy-link">BUY</a>
+                                        </button>
+                                    </div>
+                                    <div class="selling-product__item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Hear</span>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="content-choose-us__header-item content-choose-us__header-item-active">
-                                T-Shirts
+                            <li class="selling-product__item l-3 m-4 c-6">
+                                <a href="" class="selling-product__item-link">
+                                    <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/36d95f5d37f87f36745f0e35e3ecf9b0);background-size: contain;background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="selling-product__information">
+                                        <div class="selling-product__information-wrap">
+                                            <p class="selling-product__name">Wide Form Shirt</p>
+                                            <p class="selling-product__price">500$</p>
+                                            <p class="selling-product__discount">1.400$</p>
+                                        </div>
+                                        <button class="selling-product__buy btn button">
+                                            <a href="" class="selling-product__buy-link">BUY</a>
+                                        </button>
+                                    </div>
+                                    <div class="selling-product__item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Hear</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="selling-product__item l-3 m-4 c-6">
+                                <a href="" class="selling-product__item-link">
+                                    <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/433387abb147414d91232d1be6e0c216);background-size: contain;background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="selling-product__information">
+                                        <div class="selling-product__information-wrap">
+                                            <p class="selling-product__name">Shirt Polo</p>
+                                            <p class="selling-product__price">500$</p>
+                                            <p class="selling-product__discount">1.200$</p>
+                                        </div>
+                                        <button class="selling-product__buy btn button">
+                                            <a href="" class="selling-product__buy-link">BUY</a>
+                                        </button>
+                                    </div>
+                                    <div class="selling-product__item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Hear</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="selling-product__item l-3 m-4 c-6">
+                                <a href="" class="selling-product__item-link">
+                                    <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/36d95f5d37f87f36745f0e35e3ecf9b0);background-size: contain;background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="selling-product__information">
+                                        <div class="selling-product__information-wrap">
+                                            <p class="selling-product__name">Wide Form Shirt</p>
+                                            <p class="selling-product__price">500$</p>
+                                            <p class="selling-product__discount">1.400$</p>
+                                        </div>
+                                        <button class="selling-product__buy btn button">
+                                            <a href="" class="selling-product__buy-link">BUY</a>
+                                        </button>
+                                    </div>
+                                    <div class="selling-product__item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Hear</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="selling-product__item l-3 m-4 c-6">
+                                <a href="" class="selling-product__item-link">
+                                    <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/433387abb147414d91232d1be6e0c216);background-size: contain;background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="selling-product__information">
+                                        <div class="selling-product__information-wrap">
+                                            <p class="selling-product__name">Shirt Polo</p>
+                                            <p class="selling-product__price">500$</p>
+                                            <p class="selling-product__discount">1.200$</p>
+                                        </div>
+                                        <button class="selling-product__buy btn button">
+                                            <a href="" class="selling-product__buy-link">BUY</a>
+                                        </button>
+                                    </div>
+                                    <div class="selling-product__item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Hear</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="selling-product__item l-3 m-4 c-6">
+                                <a href="" class="selling-product__item-link">
+                                    <div class="selling-product__item-img" style="background-image: url(https://cf.shopee.vn/file/36d95f5d37f87f36745f0e35e3ecf9b0);background-size: contain;background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="selling-product__information">
+                                        <div class="selling-product__information-wrap">
+                                            <p class="selling-product__name">Wide Form Shirt</p>
+                                            <p class="selling-product__price">500$</p>
+                                            <p class="selling-product__discount">1.400$</p>
+                                        </div>
+                                        <button class="selling-product__buy btn button">
+                                            <a href="" class="selling-product__buy-link">BUY</a>
+                                        </button>
+                                    </div>
+                                    <div class="selling-product__item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Hear</span>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="content-choose-us__body">
-                        <div class="content-choose-us__review">
-                            <div class="content-choose-us__pr">
-                                <img src="https://cf.shopee.vn/file/b2ebf57750df256a462d6f890b8ad732" alt="" class="content-choose-us__pr-img">
-                                <button class="content-choose-us__icon">
-                                    <i class="content-choose-us__icon--play fa-solid fa-play"></i>
-                                </button>
-                            </div>
-                            <div class="content-choose-us__pr-son">
-                                <img src="https://i.im.ge/2022/10/20/2wnOdr.content-choose-us-pr-son-img.jpg" alt="" class="content-choose-us__pr-son-img">
-                            </div>
-                        </div>
-                        <div class="content-choose-us__filter"></div>
-                        <div class="content-choose-us__des">
-                            <h2 class="content-choose-us__des-heading">Why Choose Us</h2>
-                            <p class="content-choose-us__des-text">Get lost on the beautiful beaches of United, or get caught up in the wildness of the night life. Its up to you. Nihil quaeque moderatius quo ut, eu vix noster fierent</p>
-                            <button class="content-choose-us__des-btn btn button">Order Now</button>
-                        </div>
-                    </div>
                 </div>
-            </div>
 
-            <!-- Review website product -->
-            <div class="content-review__web">
-                <div class="content-review__web-bird grid wid">
-                    <img src="https://i.im.ge/2022/10/20/26SMef.backrough.png" alt="" class="content-review__web-bird-downimg">
-                    <img src="https://i.im.ge/2022/10/20/26SMef.backrough.png" alt="" class="content-review__web-bird-up">
-                
-                    <div class="content-review__web-wrap ">
-                        <div class="content-review__item mg__top">
-                            <div class="content-review__icon-wrap">
-                                <div class="content-review__icon-fa">
-                                    <i class="content-review__icon-fa--phone fa-solid fa-mobile"></i>
-                                    <div class="content-review__icon-son">
-                                        <i class="content-review__icon-son--hear fa-solid fa-heart"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <h2 class="content-review__heading">Years Experience</h2>
-                            <p class="content-review__text">Fashion yourself as a Payfast application user</p>
-                            <button class="content-review__btn btn button">
-                                <a href="" class="content-review__btn-link">See More</a>
-                            </button>
-                        </div>
-
-                        <div class="content-review__item content-review__item-active mg__bt">
-                            <div class="content-review__icon-wrap">
-                                <div class="content-review__icon-fa content-review__icon-fa--active">
-                                    <i class="content-review__icon-fa--phone fa-solid fa-mobile"></i>
-                                    <div class="content-review__icon-son">
-                                        <i class="content-review__icon-son--hear fa-solid fa-heart"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <h2 class="content-review__heading">Years Experience</h2>
-                            <p class="content-review__text content-review__text-active">Fashion yourself as a Payfast application user</p>
-                            <button class="content-review__btn btn button content-review__btn-active">
-                                <a href="" class="content-review__btn-link content-review__btn-link-active">See More</a>
-                            </button>
-                        </div>
-
-                        <div class="content-review__item mg__top">
-                            <div class="content-review__icon-wrap">
-                                <div class="content-review__icon-fa">
-                                    <i class="content-review__icon-fa--phone fa-solid fa-mobile"></i>
-                                    <div class="content-review__icon-son">
-                                        <i class="content-review__icon-son--hear fa-solid fa-heart"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <h2 class="content-review__heading">Years Experience</h2>
-                            <p class="content-review__text">Fashion yourself as a Payfast application user</p>
-                            <button class="content-review__btn btn button">
-                                <a href="" class="content-review__btn-link">See More</a>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="content-review__web-page">
-                        <i class="content-review__web-page-icon fa-solid fa-circle"></i>
-                        <i class="content-review__web-page-icon fa-solid fa-circle"></i>
-                        <i class="content-review__web-page-icon fa-solid fa-circle"></i>
-                        <i class="content-review__web-page-icon fa-solid fa-circle"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Success Stories -->
-            <div class="content-success">
-                <div class="content-success__wrap grid wid">
-                    <h2 class="content-success__heading">Get to know about us</h2>
-                    <ul class="content-success__list">
-                        <li class="content-success__item">
-                            <div class="content-success__item-wrap">
-                                <p class="content-success__item-number">36K+</p>
-                                <p class="content-success__item-des">User Trust</p>
-                            </div>
-                        </li>
-                        <li class="content-success__item">
-                            <div class="content-success__item-wrap">
-                                <p class="content-success__item-number">42K+</p>
-                                <p class="content-success__item-des">Brand Vision</p>
-                            </div>
-                        </li>
-                        <li class="content-success__item">
-                            <div class="content-success__item-wrap">
-                                <p class="content-success__item-number">8K+</p>
-                                <p class="content-success__item-des">Achievment</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Trending Ourfit Of The Day -->
-            <div class="content-trending">
-                <div class="content-trending__wrap grid wid">
-                    <div class="content-trending__des">
-                        <h2 class="content-trending__heading">Trending Ourfit Of The Day</h2>
-                        <p class="content-trending__text">The e-commerce site has an eye catching design and is perfect for people who want to buy different items, but don't have time for shopping.</p>
-                        <button class="content-trending__btn btn button">
-                            <a href="" class="content-trending__btn-link">Explore</a>
-                        </button>
-                    </div>
-                    <div class="content-trending__list grid wid">
-                        <a class="content-trending__item">
-                            <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/sg-11134201-22090-9ur7jxen42hv13); background-size: contain; background-repeat: no-repeat;"></div>
-                            <div class="content-trending__item-infomation">
-                                <div class="content-trending__item-infomation--wrap">
-                                    <p class="content-trending__item-infomation--name">Hoodie</p>
-                                    <p class="content-trending__item-infomation--collection">Collection 2022</p>
-                                </div>
-                                <p class="content-trending__item-infomation--price">$800</p>
-                            </div>
-                            <div class="content-trending__item-favourite">
-                                <i class="fas fa-check"></i>
-                                <span>Hear</span>
-                            </div>
-                        </a>
-                        <a class="content-trending__item">
-                            <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/3f527e2ceb535522813f572c5cb341c1); background-size: contain; background-repeat: no-repeat;"></div>
-                            <div class="content-trending__item-infomation">
-                                <div class="content-trending__item-infomation--wrap">
-                                    <p class="content-trending__item-infomation--name">Jean</p>
-                                    <p class="content-trending__item-infomation--collection">Collection 2022</p>
-                                </div>
-                                <p class="content-trending__item-infomation--price">$800</p>
-                            </div>
-                            <div class="content-trending__item-favourite">
-                                <i class="fas fa-check"></i>
-                                <span>Hear</span>
-                            </div>
-                        </a>
-                        <a class="content-trending__item">
-                            <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/348d9b3657b6e229dc5631a40db488bb); background-size: contain; background-repeat: no-repeat;"></div>
-                            <div class="content-trending__item-infomation">
-                                <div class="content-trending__item-infomation--wrap">
-                                    <p class="content-trending__item-infomation--name">Sweater</p>
-                                    <p class="content-trending__item-infomation--collection">Collection 2022</p>
-                                </div>
-                                <p class="content-trending__item-infomation--price">$800</p>
-                            </div>
-                            <div class="content-trending__item-favourite">
-                                <i class="fas fa-check"></i>
-                                <span>Hear</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Question -->
-            <div class="content-question">
-                <div class="content-question__wrap grid wid">
-                    <div class="content-question__header">
-                        <h2 class="content-question__heading">Have Any Question ?</h2>
-                        <div class="content-question__nav">
-                            <ul class="content-question__nav-wrap">
-                                <li class="content-question__nav-item">
-                                    <a href="" class="content-question__nav-item-link">Payments</a>
+                <!-- Choose Us -->
+                <div class="content-choose-us">
+                    <div class="content-choose-us__wrap grid wid grid__mb">
+                        <div class="content-choose-us__header">
+                            <h2 class="content-choose-us__header-heading">Looking for favourite t-shirt ?</h2>
+                            <ul class="content-choose-us__header-list">
+                                <li class="content-choose-us__header-item">
+                                    All
                                 </li>
-                                <li class="content-question__nav-item">
-                                    <a href="" class="content-question__nav-item-link">Refunds</a>
+                                <li class="content-choose-us__header-item">
+                                    Assecories
                                 </li>
-                                <li class="content-question__nav-item content-question__nav-item-active">
-                                    <a href="" class="content-question__nav-item-link">Pricing</a>
-                                </li>       
-                                <li class="content-question__nav-item">
-                                    <a href="" class="content-question__nav-item-link">Shipping</a>
+                                <li class="content-choose-us__header-item">
+                                    Categories
                                 </li>
-                                <li class="content-question__nav-item">
-                                    <a href="" class="content-question__nav-item-link">Orther</a>
+                                <li class="content-choose-us__header-item content-choose-us__header-item-active">
+                                    T-Shirts
                                 </li>
                             </ul>
                         </div>
+                        <div class="content-choose-us__body">
+                            <div class="content-choose-us__review">
+                                <div class="content-choose-us__pr">
+                                    <img src="https://cf.shopee.vn/file/b2ebf57750df256a462d6f890b8ad732" alt="" class="content-choose-us__pr-img">
+                                    <button class="content-choose-us__icon">
+                                        <i class="content-choose-us__icon--play fa-solid fa-play"></i>
+                                    </button>
+                                </div>
+                                <div class="content-choose-us__pr-son">
+                                    <img src="https://i.im.ge/2022/10/20/2wnOdr.content-choose-us-pr-son-img.jpg" alt="" class="content-choose-us__pr-son-img">
+                                </div>
+                            </div>
+                            <div class="content-choose-us__filter"></div>
+                            <div class="content-choose-us__des">
+                                <h2 class="content-choose-us__des-heading">Why Choose Us</h2>
+                                <p class="content-choose-us__des-text">Get lost on the beautiful beaches of United, or get caught up in the wildness of the night life. Its up to you. Nihil quaeque moderatius quo ut, eu vix noster fierent</p>
+                                <button class="content-choose-us__des-btn btn button">Order Now</button>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="content-question__pricing">
-                        <div class="content-question__pricing-rain-one">
-                            <img src="https://i.im.ge/2022/10/21/26GXBp.drops-water.png" alt="" class="content-question__pricing-rain-img">
-                        </div>
-                        <div class="content-question__pricing-filter"></div>
-                        <div class="content-question__pricing-wrap">
-                            <div class="content-question__pricing-wrap-item">
-                                <div class="content-question__pricing-title-icon">
-                                    <p class="content-question__pricing-title">Personal</p>
-                                    <div class="content-question__pricing-wrap-icon">
-                                        <i class="content-question__pricing-icon fa-solid fa-check"></i>
+                <!-- Review website product -->
+                <div class="content-review__web">
+                    <div class="content-review__web-bird grid wid grid__mb">
+                        <img src="https://i.im.ge/2022/10/20/26SMef.backrough.png" alt="" class="content-review__web-bird-downimg">
+                        <img src="https://i.im.ge/2022/10/20/26SMef.backrough.png" alt="" class="content-review__web-bird-up">
+                    
+                        <div class="content-review__web-wrap ">
+                            <div class="content-review__item mg__top mobile_hidden">
+                                <div class="content-review__icon-wrap">
+                                    <div class="content-review__icon-fa">
+                                        <i class="content-review__icon-fa--phone fa-solid fa-mobile"></i>
+                                        <div class="content-review__icon-son">
+                                            <i class="content-review__icon-son--hear fa-solid fa-heart"></i>
+                                        </div>
                                     </div>
                                 </div>
-                                <p class="content-question__pricing-price">
-                                    $100 <i class="content-question__pricing-price--month">/month</i>
-                                </p>
-                                <ul class="content-question__pricing-list">
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">Unlock Special Fiture</p>
-                                    </li>
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">Coud service</p>
-                                    </li>
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">Unlimited Saved</p>
-                                    </li>
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">All Type of File</p>
-                                    </li>
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">Update SUpport</p>
-                                        
-                                    </li>
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">For 2 Device</p>
-                                    </li>
-                                    <button class="content-question__pricing-btn btn button">
-                                        <a href="" class="content-question__pricing-btn-link">Get Started</a>
-                                    </button>
-                                </ul>
+                                <h2 class="content-review__heading">Years Experience</h2>
+                                <p class="content-review__text">Fashion yourself as a Payfast application user</p>
+                                <button class="content-review__btn btn button">
+                                    <a href="" class="content-review__btn-link">See More</a>
+                                </button>
                             </div>
-                            <div class="content-question__pricing-wrap-item">
-                                <div class="content-question__pricing-title-icon">
-                                    <p class="content-question__pricing-title">Team</p>
-                                    <div class="content-question__pricing-wrap-icon">
-                                        <i class="content-question__pricing-icon fa-solid fa-check"></i>
+
+                            <div class="content-review__item content-review__item-active mg__bt">
+                                <div class="content-review__icon-wrap">
+                                    <div class="content-review__icon-fa content-review__icon-fa--active">
+                                        <i class="content-review__icon-fa--phone fa-solid fa-mobile"></i>
+                                        <div class="content-review__icon-son">
+                                            <i class="content-review__icon-son--hear fa-solid fa-heart"></i>
+                                        </div>
                                     </div>
                                 </div>
-                                <p class="content-question__pricing-price">
-                                    $200 <i class="content-question__pricing-price--month">/month</i>
-                                </p>
-                                <ul class="content-question__pricing-list">
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                <h2 class="content-review__heading">Years Experience</h2>
+                                <p class="content-review__text content-review__text-active">Fashion yourself as a Payfast application user</p>
+                                <button class="content-review__btn btn button content-review__btn-active">
+                                    <a href="" class="content-review__btn-link content-review__btn-link-active">See More</a>
+                                </button>
+                            </div>
+
+                            <div class="content-review__item mg__top mobile_hidden">
+                                <div class="content-review__icon-wrap">
+                                    <div class="content-review__icon-fa">
+                                        <i class="content-review__icon-fa--phone fa-solid fa-mobile"></i>
+                                        <div class="content-review__icon-son">
+                                            <i class="content-review__icon-son--hear fa-solid fa-heart"></i>
                                         </div>
-                                        <p class="content-question__pricing-item-text">Unlock Special Fiture</p>
+                                    </div>
+                                </div>
+                                <h2 class="content-review__heading">Years Experience</h2>
+                                <p class="content-review__text">Fashion yourself as a Payfast application user</p>
+                                <button class="content-review__btn btn button">
+                                    <a href="" class="content-review__btn-link">See More</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="content-review__web-page">
+                            <i class="content-review__web-page-icon fa-solid fa-circle"></i>
+                            <i class="content-review__web-page-icon fa-solid fa-circle"></i>
+                            <i class="content-review__web-page-icon fa-solid fa-circle"></i>
+                            <i class="content-review__web-page-icon fa-solid fa-circle"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Stories -->
+                <div class="content-success">
+                    <div class="content-success__wrap grid wid grid__mb">
+                        <h2 class="content-success__heading">Get to know about us</h2>
+                        <ul class="content-success__list">
+                            <li class="content-success__item">
+                                <div class="content-success__item-wrap">
+                                    <p class="content-success__item-number">36K+</p>
+                                    <p class="content-success__item-des">User Trust</p>
+                                </div>
+                            </li>
+                            <li class="content-success__item">
+                                <div class="content-success__item-wrap">
+                                    <p class="content-success__item-number">42K+</p>
+                                    <p class="content-success__item-des">Brand Vision</p>
+                                </div>
+                            </li>
+                            <li class="content-success__item">
+                                <div class="content-success__item-wrap">
+                                    <p class="content-success__item-number">8K+</p>
+                                    <p class="content-success__item-des">Achievment</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Trending Ourfit Of The Day -->
+                <div class="content-trending">
+                    <div class="content-trending__wrap grid wid grid__mb">
+                        <div class="content-trending__des">
+                            <h2 class="content-trending__heading">Trending Ourfit Of The Day</h2>
+                            <p class="content-trending__text">The e-commerce site has an eye catching design and is perfect for people who want to buy different items, but don't have time for shopping.</p>
+                            <button class="content-trending__btn btn button">
+                                <a href="" class="content-trending__btn-link">Explore</a>
+                            </button>
+                        </div>
+                        <div class="content-trending__list grid wid grid__mb">
+                            <a class="content-trending__item l-3 m-4 c-6">
+                                <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/sg-11134201-22090-9ur7jxen42hv13); background-size: contain; background-repeat: no-repeat;"></div>
+                                <div class="content-trending__item-infomation">
+                                    <div class="content-trending__item-infomation--wrap">
+                                        <p class="content-trending__item-infomation--name">Hoodie</p>
+                                        <p class="content-trending__item-infomation--collection">Collection 2022</p>
+                                    </div>
+                                    <p class="content-trending__item-infomation--price">$800</p>
+                                </div>
+                                <div class="content-trending__item-favourite">
+                                    <i class="fas fa-check"></i>
+                                    <span>Hear</span>
+                                </div>
+                            </a>
+                            <a class="content-trending__item l-3 m-4 c-6">
+                                <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/3f527e2ceb535522813f572c5cb341c1); background-size: contain; background-repeat: no-repeat;"></div>
+                                <div class="content-trending__item-infomation">
+                                    <div class="content-trending__item-infomation--wrap">
+                                        <p class="content-trending__item-infomation--name">Jean</p>
+                                        <p class="content-trending__item-infomation--collection">Collection 2022</p>
+                                    </div>
+                                    <p class="content-trending__item-infomation--price">$800</p>
+                                </div>
+                                <div class="content-trending__item-favourite">
+                                    <i class="fas fa-check"></i>
+                                    <span>Hear</span>
+                                </div>
+                            </a>
+                            <a class="content-trending__item l-3 m-4 c-6">
+                                <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/348d9b3657b6e229dc5631a40db488bb); background-size: contain; background-repeat: no-repeat;"></div>
+                                <div class="content-trending__item-infomation">
+                                    <div class="content-trending__item-infomation--wrap">
+                                        <p class="content-trending__item-infomation--name">Sweater</p>
+                                        <p class="content-trending__item-infomation--collection">Collection 2022</p>
+                                    </div>
+                                    <p class="content-trending__item-infomation--price">$800</p>
+                                </div>
+                                <div class="content-trending__item-favourite">
+                                    <i class="fas fa-check"></i>
+                                    <span>Hear</span>
+                                </div>
+                            </a>
+                            <a class="content-trending__item l-3 m-4 c-6">
+                                <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/3f527e2ceb535522813f572c5cb341c1); background-size: contain; background-repeat: no-repeat;"></div>
+                                <div class="content-trending__item-infomation">
+                                    <div class="content-trending__item-infomation--wrap">
+                                        <p class="content-trending__item-infomation--name">Jean</p>
+                                        <p class="content-trending__item-infomation--collection">Collection 2022</p>
+                                    </div>
+                                    <p class="content-trending__item-infomation--price">$800</p>
+                                </div>
+                                <div class="content-trending__item-favourite">
+                                    <i class="fas fa-check"></i>
+                                    <span>Hear</span>
+                                </div>
+                            </a>
+                            <a class="content-trending__item l-3 m-4 c-6">
+                                <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/348d9b3657b6e229dc5631a40db488bb); background-size: contain; background-repeat: no-repeat;"></div>
+                                <div class="content-trending__item-infomation">
+                                    <div class="content-trending__item-infomation--wrap">
+                                        <p class="content-trending__item-infomation--name">Sweater</p>
+                                        <p class="content-trending__item-infomation--collection">Collection 2022</p>
+                                    </div>
+                                    <p class="content-trending__item-infomation--price">$800</p>
+                                </div>
+                                <div class="content-trending__item-favourite">
+                                    <i class="fas fa-check"></i>
+                                    <span>Hear</span>
+                                </div>
+                            </a>
+                            <a class="content-trending__item l-3 m-4 c-6">
+                                <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/348d9b3657b6e229dc5631a40db488bb); background-size: contain; background-repeat: no-repeat;"></div>
+                                <div class="content-trending__item-infomation">
+                                    <div class="content-trending__item-infomation--wrap">
+                                        <p class="content-trending__item-infomation--name">Sweater</p>
+                                        <p class="content-trending__item-infomation--collection">Collection 2022</p>
+                                    </div>
+                                    <p class="content-trending__item-infomation--price">$800</p>
+                                </div>
+                                <div class="content-trending__item-favourite">
+                                    <i class="fas fa-check"></i>
+                                    <span>Hear</span>
+                                </div>
+                            </a>
+                            <a class="content-trending__item l-3 m-4 c-6">
+                                <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/348d9b3657b6e229dc5631a40db488bb); background-size: contain; background-repeat: no-repeat;"></div>
+                                <div class="content-trending__item-infomation">
+                                    <div class="content-trending__item-infomation--wrap">
+                                        <p class="content-trending__item-infomation--name">Sweater</p>
+                                        <p class="content-trending__item-infomation--collection">Collection 2022</p>
+                                    </div>
+                                    <p class="content-trending__item-infomation--price">$800</p>
+                                </div>
+                                <div class="content-trending__item-favourite">
+                                    <i class="fas fa-check"></i>
+                                    <span>Hear</span>
+                                </div>
+                            </a>
+                            <a class="content-trending__item l-3 m-4 c-6">
+                                <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/348d9b3657b6e229dc5631a40db488bb); background-size: contain; background-repeat: no-repeat;"></div>
+                                <div class="content-trending__item-infomation">
+                                    <div class="content-trending__item-infomation--wrap">
+                                        <p class="content-trending__item-infomation--name">Sweater</p>
+                                        <p class="content-trending__item-infomation--collection">Collection 2022</p>
+                                    </div>
+                                    <p class="content-trending__item-infomation--price">$800</p>
+                                </div>
+                                <div class="content-trending__item-favourite">
+                                    <i class="fas fa-check"></i>
+                                    <span>Hear</span>
+                                </div>
+                            </a>
+                            <a class="content-trending__item l-3 m-4 c-6">
+                                <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/348d9b3657b6e229dc5631a40db488bb); background-size: contain; background-repeat: no-repeat;"></div>
+                                <div class="content-trending__item-infomation">
+                                    <div class="content-trending__item-infomation--wrap">
+                                        <p class="content-trending__item-infomation--name">Sweater</p>
+                                        <p class="content-trending__item-infomation--collection">Collection 2022</p>
+                                    </div>
+                                    <p class="content-trending__item-infomation--price">$800</p>
+                                </div>
+                                <div class="content-trending__item-favourite">
+                                    <i class="fas fa-check"></i>
+                                    <span>Hear</span>
+                                </div>
+                            </a>
+                            <a class="content-trending__item l-3 m-4 c-6">
+                                <div class="content-trending__item-img" style="background-image: url(https://cf.shopee.vn/file/348d9b3657b6e229dc5631a40db488bb); background-size: contain; background-repeat: no-repeat;"></div>
+                                <div class="content-trending__item-infomation">
+                                    <div class="content-trending__item-infomation--wrap">
+                                        <p class="content-trending__item-infomation--name">Sweater</p>
+                                        <p class="content-trending__item-infomation--collection">Collection 2022</p>
+                                    </div>
+                                    <p class="content-trending__item-infomation--price">$800</p>
+                                </div>
+                                <div class="content-trending__item-favourite">
+                                    <i class="fas fa-check"></i>
+                                    <span>Hear</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question -->
+                <div class="content-question">
+                    <div class="content-question__wrap grid wid grid__mb">
+                        <div class="content-question__header">
+                            <h2 class="content-question__heading">Have Any Question ?</h2>
+                            <div class="content-question__nav">
+                                <ul class="content-question__nav-wrap">
+                                    <li class="content-question__nav-item">
+                                        <a href="" class="content-question__nav-item-link">Payments</a>
                                     </li>
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">Coud service</p>
+                                    <li class="content-question__nav-item">
+                                        <a href="" class="content-question__nav-item-link">Refunds</a>
                                     </li>
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">Unlimited Saved</p>
+                                    <li class="content-question__nav-item content-question__nav-item-active">
+                                        <a href="" class="content-question__nav-item-link">Pricing</a>
+                                    </li>       
+                                    <li class="content-question__nav-item">
+                                        <a href="" class="content-question__nav-item-link">Shipping</a>
                                     </li>
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">All Type of File</p>
+                                    <li class="content-question__nav-item">
+                                        <a href="" class="content-question__nav-item-link">Orther</a>
                                     </li>
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">Update SUpport</p>
-                                        
-                                    </li>
-                                    <li class="content-question__pricing-item">
-                                        <div class="content-question__pricing-item-wrap-icon">
-                                            <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
-                                        </div>
-                                        <p class="content-question__pricing-item-text">For 2 Device</p>
-                                    </li>
-                                    <button class="content-question__pricing-btn btn button">
-                                        <a href="" class="content-question__pricing-btn-link">Get Started</a>
-                                    </button>
                                 </ul>
                             </div>
                         </div>
-                        <div class="content-question__pricing-rain-two">
-                            <img src="https://i.im.ge/2022/10/21/26GXBp.drops-water.png" alt="" class="content-question__pricing-rain-img">                       
+
+                        <div class="content-question__pricing">
+                            <div class="content-question__pricing-rain-one">
+                                <img src="https://i.im.ge/2022/10/21/26GXBp.drops-water.png" alt="" class="content-question__pricing-rain-img">
+                            </div>
+                            <div class="content-question__pricing-filter"></div>
+                            <div class="content-question__pricing-wrap">
+                                <div class="content-question__pricing-wrap-item">
+                                    <div class="content-question__pricing-title-icon">
+                                        <p class="content-question__pricing-title">Personal</p>
+                                        <div class="content-question__pricing-wrap-icon">
+                                            <i class="content-question__pricing-icon fa-solid fa-check"></i>
+                                        </div>
+                                    </div>
+                                    <p class="content-question__pricing-price">
+                                        $100 <i class="content-question__pricing-price--month">/month</i>
+                                    </p>
+                                    <ul class="content-question__pricing-list">
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">Unlock Special Fiture</p>
+                                        </li>
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">Coud service</p>
+                                        </li>
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">Unlimited Saved</p>
+                                        </li>
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">All Type of File</p>
+                                        </li>
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">Update SUpport</p>
+                                            
+                                        </li>
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">For 2 Device</p>
+                                        </li>
+                                        <button class="content-question__pricing-btn btn button">
+                                            <a href="" class="content-question__pricing-btn-link">Get Started</a>
+                                        </button>
+                                    </ul>
+                                </div>
+                                <div class="content-question__pricing-wrap-item">
+                                    <div class="content-question__pricing-title-icon">
+                                        <p class="content-question__pricing-title">Team</p>
+                                        <div class="content-question__pricing-wrap-icon">
+                                            <i class="content-question__pricing-icon fa-solid fa-check"></i>
+                                        </div>
+                                    </div>
+                                    <p class="content-question__pricing-price">
+                                        $200 <i class="content-question__pricing-price--month">/month</i>
+                                    </p>
+                                    <ul class="content-question__pricing-list">
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">Unlock Special Fiture</p>
+                                        </li>
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">Coud service</p>
+                                        </li>
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">Unlimited Saved</p>
+                                        </li>
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">All Type of File</p>
+                                        </li>
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">Update SUpport</p>
+                                            
+                                        </li>
+                                        <li class="content-question__pricing-item">
+                                            <div class="content-question__pricing-item-wrap-icon">
+                                                <i class="content-question__pricing-item-icon fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="content-question__pricing-item-text">For 2 Device</p>
+                                        </li>
+                                        <button class="content-question__pricing-btn btn button">
+                                            <a href="" class="content-question__pricing-btn-link">Get Started</a>
+                                        </button>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-question__pricing-rain-two">
+                                <img src="https://i.im.ge/2022/10/21/26GXBp.drops-water.png" alt="" class="content-question__pricing-rain-img">                       
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
         <!-- Footer -->
         <div id="footer">
-            <div class="footer__wrap grid wid">
+            <div class="footer__wrap grid wid grid__mb">
                 <div class="footer__infomation l-2">
                     <div class="footer__logo-wrap">
                         <div class="footer__logo">
